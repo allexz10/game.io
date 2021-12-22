@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap");
+
+.game {
+  display: grid;
+
+  &__content {
+    visibility: visible;
+    opacity: 1;
+    transition: all ease 0.5s;
+
+    &.hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    line-height: 1.4;
+    font-family: "Orbitron", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #dd9849;
+   
+  }
+
+  &__user,
+  &__pc {
+    max-width: 190px;
+    width: 100%;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    display: grid;
+    gap: 10px;
+   
+    color: #e9e7e7;
+    letter-spacing: 1px;
+    font-family: "Orbitron", sans-serif;
+   
+
+    &--title {
+      font-size: 24px;
+      color: #dd9849;
+      font-weight: 700;
+    }
+  }
+
+  &__user {
+    padding-left: 50px;
+  }
+
+  &__pc {
+    padding-right: 50px;
+  }
+}
+
+.health {
+  text-align: center;
+}
+
+.logo {
+  margin: 20px auto 80px auto;
+}
+
+.button__wrapper {
+  position: absolute;
+  max-width: 100px;
+  width: 100%;
+  top: 30px;
+  right: 0;
+  z-index: 5;
+
+  .settings {
+    width: 50px;
+    height: 50px;
+    background-color: #292727;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.9;
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+    transition: all ease 0.5s;
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 0.25rem #dd9849;
+      opacity: 1;
+    }
+  }
+
+  .nav__buttons {
+   top: 25px;
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    right: 110px;
+    border: none;
+
+    &.hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .buttons {
+      padding: 10px 15px;
+      background-color: #292727;
+      opacity: 0.9;
+      color: #ffffff;
+      letter-spacing: 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-family: "Orbitron", sans-serif;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 0 0 0 0.25rem #dd9849;
+      }
+    }
+  }
+}
+
+.result {
+  font-weight: 700;
+  font-size: 36px;
+  color: #e9e7e7;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 300px;
+  margin: 0 auto;
+  width: 100%;
+  height: 200px;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    color: #e9e7e7;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+  }
+}
+
+.battle {
+  height: 480px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+align-items: center;
+  &__character {
+    width: 320px;
+    height: 320px;
+    background-color: #292727;
+    opacity: 0.9;
+    border-radius: 50%;
+    box-shadow: 10px 10px 120px #000000;
+  }
+
+  &__character--image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    max-width: 860px;
+    width: 100%;
+    align-items: center;
+  }
+
+  &__vs {
+    font-size: 28px;
+    font-weight: 700;
+    color: #e9e7e7;
+  }
+}
+
+.buttons__wrapper {
+  max-width: 650px;
+  width: 100%;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 15px auto;
+}
+
+.character__name {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #e9e7e7;
+}
+
+.button__character {
+  width: 120px;
+  height: 120px;
+  padding: 5px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #dd9849;
+  outline: 2px solid transparent;
+  transition: all ease 0.5s;
+
+  &:hover {
+    box-shadow: 0 1px 25px #e9e7e7;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.25rem #dd9849;
+  }
+}
+
+.character__image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}

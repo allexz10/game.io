@@ -1,0 +1,137 @@
+.intro__modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  align-items: center;
+  padding: 35px 25px 45px 25px;
+  box-shadow: 0 1px 20px #fffffd;
+  border-radius: 15px;
+  max-width: 570px;
+  display: grid;
+  margin: 0 auto 20px auto;
+  justify-content: center;
+  width: 100%;
+  background-color: #f5f5f5;
+  
+  .content {
+    display: grid;
+    gap: 10px;
+    max-width: 480px;
+    width: 100%;
+  }
+
+  .heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: #413e3e;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .image__wrapper {
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    object-fit: cover;
+  }
+
+  .rules {
+    color: #413e3e;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    line-height: 1.4;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .checkbox__wrapper {
+    display: flex;
+    height: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .checkbox {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .username__wrapper,
+  .pcname__wrapper {
+    display: grid;
+    margin-bottom: 10px;
+  }
+
+  .pcname__wrapper {
+    margin-bottom: 15px;
+  }
+
+  .label {
+    color: #413e3e;
+    cursor: pointer;
+    text-align-last: left;
+    font-weight: 500;
+    &--username,
+    &--pcname {
+      margin-bottom: 8px;
+    }
+  }
+
+  .input {
+    padding: 12px 10px 10px 10px;
+    color: #413e3e;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+    transition: all ease 0.5s;
+    &::placeholder {
+      font-size: 14px;
+      color: #c4c4c4;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem #b4c3f3;
+    }
+  }
+
+  .button {
+    padding: 14px 25px;
+    border-radius: 8px;
+    background-color: #3d3c3c;
+    width: 100%;
+    margin: 0 auto;
+    color: #f0e9e9;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    opacity: 1;
+    transition: all ease 0.5s;
+    &:hover {
+      box-shadow: 0 0 0 0.3rem #757474;
+      border:2px solid #f0e9e9;
+    }
+
+    &:hover:disabled {
+      box-shadow: none;
+    }
+
+    &:disabled {
+      cursor: no-drop;
+      opacity: 0.2;
+      background-color: #383535;
+      color: #ffffff;
+    }
+  }
+}
