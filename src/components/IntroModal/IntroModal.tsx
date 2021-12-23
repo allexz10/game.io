@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import './IntroModal.scss';
 
 type Props = {
@@ -31,8 +31,6 @@ const IntroModal: React.FC<Props> = ({ closeModal, namesArray }) => {
         <div className="image__wrapper">
           <img
             className="image"
-            width={300}
-            height={300}
             src="./ruless.svg"
             alt="rules"
           />

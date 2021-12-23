@@ -225,7 +225,7 @@ const Game = () => {
                     onClick={() => setSettings(!settings)}
                     className="settings"
                   >
-                    <img src="settings.svg" alt="settings button" />
+                    <img className="settings__image" src="settings.svg" alt="settings button" />
                   </button>
                   <div
                     className={settings ? 'nav__buttons' : 'nav__buttons hidden'}
